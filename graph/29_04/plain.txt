@@ -1,0 +1,26 @@
+1. Transport atomowy:
+-A z s do t, B z t do s
+-A i B nie moga sie zblizyc na odleglosc mniejsza niz d
+-idzie albo jeden albo obu
+(O(V^4), O(V^3))
+>warshall
+>graf: pary dozwolonych pozycji (A, B)
+>dfs z (s, t) do (t, s)
+
+2.Arbitraż:
+-waluty od 1 do n
+-K[x][y] ile y za 1 x
+-czy istnieje seria tranzakcji gdzie za jednostke pewnej waluty dostaje wiecej niz 1
+>Bellman Ford
+>dodawanie -log zamiast mnozenia
+>jezeli znajdziemy cykl 'ujemny' to mozemy
+
+
+3.Najkrotsze sciezki po malejacych krawedziach
+
+4.domkniecie przechodnie grafu G skierowanego to taki taki graf G' gdzie jesli g ma sciezke z u do v to G' ma krawedz z u do v
+ -algorytm domykajacy krawedzie przechodne (rep macierzowa)
+ >warshall sTrueFalsowany
+
+ 5.implementacja algorytmu kruskala
+ -interface findunion

@@ -1,0 +1,27 @@
+1.Dijkstra
+2.Wypisanie najkrotszej sciezki po parentach
+
+3.Najkrotsza sciezka w DAG:
+-sortujemy topologicznie
+-po kolei relaksujemy krawedzie
+
+4.Dlugosc sciezki to iloczyn ich wag, znalezc sciezke
+- loga+logb = logab
+-zamieniamy wagi na ich algorytmy
+-teoretycznie mozna dijskre z mnozeniem zamiast dodawania
+
+5.Znalezc sciezke z s do t gdzie dowolna minimalna waga jest jak najwieksza
+-umieszczamy krawedzie w maxqueue
+-union.find ???
+-sciagamy maksymalna krawedz
+-umax, vmax
+-waga mimalna jest pamietana
+albo:
+-zmodyfikowana dijsktra (przechowujemy min wage i maxqueue zamiast queue)
+
+6.W kazdym wierzcholku stacja benzynowa z inna cena, najtansza trasa (spalanie 1l/km, pojemnosc baku D)
+-D wierzcholkow (v, d) + dijkstra
+
+7. dwoch kierowcow AB, jada na zmiane, chcemy wybrac trase zeby B jechal jak najmniej
+-mnozymy wierzcholki dla AB nowe krawedzie + Dijsktra
+8. chcemy znalezc najkrotsza sciezke przebiegajaca po krawedziach o malejacych wagach
