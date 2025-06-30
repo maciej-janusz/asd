@@ -5,18 +5,18 @@ def dfs(G):
     visited = [False]*n
     parent = [None]*n
 
-    def visit(G, v):
+    def visit(u):
         nonlocal time
-        visited[v] = True
+        visited[u] = True
         time += 1
-        for u in G[v]:
-            if not visited[u]:
-                parent[u] = v
-                visit(G, u)
+        for v in G[u]:
+            if not visited[v]:
+                parent[v] = u
+                visit(v)
         time += 1
 
-    for v in range(n):
-        if not visited[v]:
-            visit(G, v)
+    for u in range(n):
+        if not visited[u]:
+            visit(u)
 
     return parent, visited

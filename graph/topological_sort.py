@@ -3,16 +3,16 @@ def topological_sort(G):
     top_sort = []
     visited = [False]*n
 
-    def visit(G, v):
-        visited[v] = True
-        for u in G[v]:
-            if not visited[u]:
-                visit(G, u)
-        top_sort.append(v)
+    def visit(G, u):
+        visited[u] = True
+        for v in G[u]:
+            if not visited[v]:
+                visit(G, v)
+        top_sort.append(u)
 
-    for v in range(n):
-        if not visited[v]:
-            visit(G, v)
+    for u in range(n):
+        if not visited[u]:
+            visit(G, u)
 
     return top_sort[::-1]
 

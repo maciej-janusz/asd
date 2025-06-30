@@ -1,4 +1,4 @@
-#O(VlogV+E)
+#O(ElogV)
 import heapq
 
 def prim(graph, start=0):

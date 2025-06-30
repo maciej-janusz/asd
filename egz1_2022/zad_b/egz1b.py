@@ -50,7 +50,7 @@ def wideentall( T ):
     depths = []
     dfs(T, depths, 0)
     best_width = max(depths)
-    best_depth = 0
+    best_depth = -1
     for i in range(len(depths)):
         if depths[i] == best_width:
             best_depth = i

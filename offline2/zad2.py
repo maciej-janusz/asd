@@ -28,6 +28,7 @@ def merge_count(A):
     left, cntl = merge_count(A[:mid])
     right, cntr = merge_count(A[mid:])
     return merge(left, right, cntl+cntr)
+
 def count_inversions(A):
     return merge_count(A)[1]
 

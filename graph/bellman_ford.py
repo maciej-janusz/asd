@@ -12,7 +12,6 @@ def bellman_ford(edges, n, s):
 
     for u, v, w in edges:
         if dist[u] + w < dist[v]:
-            print("Graph contains negative weight cycle")
             return None
 
     return dist

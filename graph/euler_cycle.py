@@ -1,12 +1,12 @@
 def dfs(G):
-    def visit(G, v, res):
+    def visit(G, u, res):
         n = len(G)
-        for u in range(n):
-            if G[v][u] == 0 or G[v][u] == 0:
+        for v in range(n):
+            if G[u][v] == 0 or G[u][v] == 0:
                 continue
             G[u][v] = G[v][u] = 0
-            visit(G, u)
-        res.append(v)
+            visit(G, v)
+        res.append(u)
 
     res = []
     visit(G, 0, res)

@@ -3,16 +3,16 @@ def count_connected(G):
     counter = 0
     visited = [False] * n
 
-    def visit(G, s):
+    def visit(u):
         n = len(G)
-        visited[s] = True
-        for i in range(n):
-            if G[s][i] and not visited[i]:
-                visit(G, i)
+        visited[u] = True
+        for v in range(n):
+            if G[u][v] and not visited[v]:
+                visit(v)
 
-    for i in range(n):
-        if not visited[i]:
+    for u in range(n):
+        if not visited[u]:
             counter += 1
-            visit(G, i)
+            visit(u)
     return counter
 
